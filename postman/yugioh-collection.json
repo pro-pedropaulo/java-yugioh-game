@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "YuGiOh Game API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login Success",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic eXVnaToxMjM=",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"yugi\",\n  \"password\": \"123\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Failure",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic eXVnaToxMjM=",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"yugi\",\n  \"password\": \"wrong\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Duel",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/duel",
+          "host": ["{{baseUrl}}"],
+          "path": ["duel"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
