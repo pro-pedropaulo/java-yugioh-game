@@ -3,9 +3,11 @@ package com.yugioh.game.service;
 import com.yugioh.game.model.Card;
 import com.yugioh.game.model.DuelResult;
 import com.yugioh.game.model.Player;
+import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 
+@Service
 public class DuelService {
     public DuelResult duel(Player p1, Player p2) {
         List<Card> deck1 = p1.getDeck();
